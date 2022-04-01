@@ -1,9 +1,9 @@
 package dao;
 
 
-import java.sql.*;
-import java.util.*;
 
+import java.util.*;
+import java.sql.*;
 
 public class StoreDao {
 			
@@ -14,24 +14,24 @@ public class StoreDao {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		//
+		
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mariadb://lacalhost:3306/sakila","root","java1234");
+			conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/sakila","root","java1234");
 			String sql = "SELECT"
 					+ "		s1.store_id storeId,"
 					+ "		s1.manager_staff_id staffId,"
 					+ "		concat(s2.first_name,' ', s2.last_name) staffNAME,"
 					+ "		s1.address_id addressId,"
 					+ "		CONCAT(a.address, IFNULL(a.address2, ' '),district) staffAddress,"
-					+ "		s1.last_update"
-					+ " 	FROM store s1 INNER JOIN staff s2"
+					+ "		s1.last_update lastUpdate"
+					+ " 	FROM store s1 "
+					+ " 	INNER JOIN staff s2"
 					+ " 	INNER JOIN address a"
 					+ " 	ON s1.manager_staff_id = s2.staff_id"
-					+ " 	AND s1.address_id = a.address_id;"
-					+ "";
-			stmt = conn.prepareStatement("");
-			rs = stmt.executeQuery("");
+					+ " 	AND s1.address_id = a.address_id;";
+			stmt = conn.prepareStatement(sql);
+			rs = stmt.executeQuery();
 			while(rs.next()) {
 				Map<String, Object> map = new HashMap<>(); // 다형성
 				map.put("storeId", rs.getInt("storeId"));
@@ -70,14 +70,13 @@ public class StoreDao {
 			StoreDao dao = new StoreDao();
 			List<Map<String, Object>> list = dao.selectStoreList();
 			for(Map m : list) {
-				System.out.println(m.get("storeId")+", ");
-				System.out.println(m.get("staffId")+", ");
-				System.out.println(m.get("staffName")+", ");
-				System.out.println(m.get("addressId")+", ");
-				System.out.println(m.get("staffAddress")+", ");
-				System.out.println(m.get("lastUpdate")+", ");
-				System.out.println(m.get(""));
-				
+				System.out.print(m.get("storeId")+", ");
+				System.out.print(m.get("staffId")+", ");
+				System.out.print(m.get("staffName")+", ");
+				System.out.print(m.get("addressId")+", ");
+				System.out.print(m.get("staffAddress")+", ");
+				System.out.print(m.get("lastUpdate")+", ");
+				System.out.println("");
 			}
 		}
 }
