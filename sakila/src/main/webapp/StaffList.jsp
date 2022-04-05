@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<a href="">index</a>
+		<a href="<%=request.getContextPath()%>/Index.jsp">index</a>
 		<h1>Staff List</h1>
 		<table class="table table-striped">
 			<thead>

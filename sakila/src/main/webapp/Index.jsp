@@ -10,23 +10,23 @@
 <body>
 	<h1>index</h1>
 	<ol>
-		<li><a href="<%=request.getContextPath()%>/storeList.jsp" class="btn btn-outline-dark" role="button">Store List</a></li>
+		<li><a href="<%=request.getContextPath()%>/StoreList.jsp" class="btn btn-outline-dark" role="button">Store List</a></li>
 			
-		<li><a href="<%=request.getContextPath()%>/staffList.jsp" class="btn btn-outline-dark" role="button">Staff List</a></li>
+		<li><a href="<%=request.getContextPath()%>/StaffList.jsp" class="btn btn-outline-dark" role="button">Staff List</a></li>
 		
-		<li><a href="<%=request.getContextPath()%>/actorInfoList.jsp" class="btn btn-outline-dark" role="button">actorInfo List</a></li>
+		<li><a href="<%=request.getContextPath()%>/ActorInfoList.jsp" class="btn btn-outline-dark" role="button">actorInfo List</a></li>
 		
-		<li><a href="<%=request.getContextPath()%>/customerList.jsp" class="btn btn-outline-dark" role="button">customerList</a></li>
+		<li><a href="<%=request.getContextPath()%>/CustomerList.jsp" class="btn btn-outline-dark" role="button">customerList</a></li>
 		
-		<li><a href="<%=request.getContextPath()%>/filmList.jsp" class="btn btn-outline-dark" role="button">filmList</a></li>
+		<li><a href="<%=request.getContextPath()%>/FilmList.jsp" class="btn btn-outline-dark" role="button">filmList</a></li>
 		
-		<li><a href="<%=request.getContextPath()%>/nicerButSLowerFilmList.jsp" class="btn btn-outline-dark" role="button">nicerButSLowerFilmList</a></li>
+		<li><a href="<%=request.getContextPath()%>/NicerButSLowerFilmList.jsp" class="btn btn-outline-dark" role="button">nicerButSLowerFilmList</a></li>
 		
-		<li><a href="<%=request.getContextPath()%>/salesByStore.jsp" class="btn btn-outline-dark" role="button">salesByStore</a></li>
+		<li><a href="<%=request.getContextPath()%>/SalesByStore.jsp" class="btn btn-outline-dark" role="button">salesByStore</a></li>
 		
-		<li><a href="<%=request.getContextPath()%>/salesByFilmCategory.jsp" class="btn btn-outline-dark" role="button">salesByFilmCategory</a></li>
+		<li><a href="<%=request.getContextPath()%>/SalesByFilmCategory.jsp" class="btn btn-outline-dark" role="button">salesByFilmCategory</a></li>
 		
-		<li><a href="<%=request.getContextPath()%>/staffListView.jsp" class="btn btn-outline-dark" role="button">staffListView</a></li>
+		<li><a href="<%=request.getContextPath()%>/StaffListView.jsp" class="btn btn-outline-dark" role="button">staffListView</a></li>
 	
 	</ol>
 </body>
