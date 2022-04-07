@@ -9,7 +9,12 @@ public class Rental {
 	private int staffId;
 	private String lastUpdate;
 	
-	
+	@Override
+	public String toString() {
+		return "Rental [rentalId=" + rentalId + ", rentalDate=" + rentalDate + ", inventoryId=" + inventoryId
+				+ ", customerId=" + customerId + ", returnDate=" + returnDate + ", staffId=" + staffId + ", lastUpdate="
+				+ lastUpdate + "]";
+	}
 	public int getRentalId() {
 		return rentalId;
 	}

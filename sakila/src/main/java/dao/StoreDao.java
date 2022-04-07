@@ -6,6 +6,11 @@ import java.util.*;
 import java.sql.*;
 
 public class StoreDao {
+	public List<Integer> selectStoreIdList() {
+	      List<Integer> list = new ArrayList<Integer>();
+	      // 
+	      return list;
+	   }
 			
 		public List<Map<String, Object>> selectStoreList() {
 			// ArrayList는 List 인터페이스 구현체의 하나
